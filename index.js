@@ -2,7 +2,7 @@ const { Client, GatewayIntentBits, Collection } = require('discord.js');
 const fs = require('fs')
 const config = require('./config.json')
 require('dotenv').config()
-const token = process.env.token
+const token = process.env.TOKEN
 
 const bot = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMembers
@@ -21,7 +21,6 @@ for (let i = 0; i < comandos.length; i++) {
 
 for (let i = 0; i < eventos.length; i++) {
     const evento = require(`./eventos/${eventos[i]}`)
-
     bot.on(evento.nome, (...args) => evento.executar(...args, bot))
 }
 

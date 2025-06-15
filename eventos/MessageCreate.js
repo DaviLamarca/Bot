@@ -6,11 +6,10 @@ module.exports = {
         if (!mensagem.content.startsWith(config.prefixo) || mensagem.author.bot) return;
 
         const args = mensagem.content.slice(prefixo.length).trim().split(/ +/);
-        console.log(args);
         const comandoNome = args.shift().toLowerCase();
+        console.log(comandoNome);
 
         let comando = bot.commands.get(comandoNome)
-        console.log(comando);
         console.log(bot.commands);
 
         if (!comando) return
