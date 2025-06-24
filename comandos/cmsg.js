@@ -5,6 +5,11 @@ let prefixo = config.prefixo;
 module.exports = {
     nome: "cmsg",
     async executar(mensagem, bot) {
+
+        if (!mensagem.member.permissions.has("Administrator")) {
+            return mensagem.reply("Você precisa ser administrador para usar este comando.");
+        }
+
         let bodycomando = mensagem.content.trim();
         let semCmd = bodycomando.split(" ");
         let args = semCmd.slice(1);
