@@ -5,6 +5,7 @@ module.exports = {
         if (!mensagem.guild || !mensagem.member) {
             return mensagem.reply("Esse comando só pode ser usado em servidores.");
         }
+
         const avatar = mensagem.member.user.displayAvatarURL({ dynamic: true, size: 512 })
         let menber = mensagem.member.user.tag
 
