@@ -4,11 +4,11 @@ module.exports = {
     async executar(mensagem, bot) {
         let prefixo = config.prefixo
         if (!mensagem.content.startsWith(config.prefixo) || mensagem.author.bot) return;
+        if (bot.bloqueados.has(mensagem.channel.id)) return;
 
         const args = mensagem.content.slice(prefixo.length).trim().split(/ +/);
         const comandoNome = args.shift().toLowerCase();
         console.log(comandoNome);
-
         let comando = bot.commands.get(comandoNome)
         console.log(bot.commands);
 

@@ -8,11 +8,11 @@ module.exports = {
         const avatar = mensagem.member.user.displayAvatarURL({ dynamic: true, size: 512 })
         let menber = mensagem.member.user.tag
 
-        let body = new EmbedBuilder().setTitle(mensagem.member.user.displayName).setThumbnail(avatar).setTitle(mensagem.member.user.displayName).setDescription("O seu usuario é: " + menber)
+        let body = new EmbedBuilder().setTitle(mensagem.member.user.displayName).setTitle(mensagem.member.user.displayName).setDescription(`${mensagem.member.joinedAt}`).setImage(avatar)
         let msg = await mensagem.channel.send({ embeds: [body] })
         setTimeout(() => {
-            msg.delete()
-            mensagem.delete()
+            msg.delete().catch(() => { })
+            mensagem.delete().catch(() => { })
         }, 5000)
     }
 }
