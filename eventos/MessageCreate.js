@@ -8,6 +8,7 @@ module.exports = {
             let msg = await mensagem.channel.send("Não posso executar comandos nesse canal")
             setTimeout(() => {
                 msg.delete().catch(() => { })
+                mensagem.delete().catch(() => { })
             }, 2000)
             return;
         }
