@@ -4,7 +4,13 @@ module.exports = {
     async executar(mensagem, bot) {
         let prefixo = config.prefixo
         if (!mensagem.content.startsWith(config.prefixo) || mensagem.author.bot) return;
-        if (bot.bloqueados.has(mensagem.channel.id)) return;
+        if (bot.bloqueados.has(mensagem.channel.id)) {
+            let msg = await mensagem.channel.send("Não posso executar comandos nesse canal")
+            setTimeout(() => {
+                msg.delete().catch(() => { })
+            }, 2000)
+            return;
+        }
 
         const args = mensagem.content.slice(prefixo.length).trim().split(/ +/);
         const comandoNome = args.shift().toLowerCase();
