@@ -5,7 +5,7 @@ module.exports = {
 
         let canal = await bot.channels.fetch("1386566946623062057")
         if (canal) {
-            await canal.send(`Bem-vindo ao Servidor! ${menber.user.tag}`)
+            await canal.send(`Bem-vindo ao Servidor! ! @${menber.user.username}`)
         } else {
             console.log("Não deu para dizer oi");
 
