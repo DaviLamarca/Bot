@@ -9,8 +9,7 @@ module.exports = {
                 await canal.send("Bot novo na aréa!")
             }
             else {
-                await canal.send(`Bem-vindo, <@${member.id}>!
-                    Sou a HAL-9, IA da ORBITA-9. Regras em #regras. Qualquer coisa, estou por aqui! (Não sou uma IA de verdade.)`);
+                await canal.send(`Bem-vindo, <@${member.id}>!Sou a HAL-9, IA da ORBITA-9. Regras em #regras. Qualquer coisa, estou por aqui! (Não sou uma IA de verdade.)`);
             }
         } catch {
             return
