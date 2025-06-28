@@ -3,7 +3,7 @@ module.export = {
     async executar(member) {
         const canal = client.channels.cache.get('1388340984672424028');
         if (canal) {
-            canal.send(`${member.user.tag} saiu do servidor 😢`);
+            await canal.send(`${member.user.tag} saiu do servidor 😢`);
         }
     }
 }
