@@ -5,7 +5,8 @@ module.exports = {
 
         let canal = await bot.channels.fetch("1386566946623062057")
         if (canal) {
-            await canal.send(`Bom dia, <@${member.id}>!. Eu sou uma inteligência artificial modelo HAL-9. Minha função é garantir a integridade operacional da estação ORBITA-9 e auxiliar a tripulação. Sua chegada foi registrada. Os protocolos de bordo estão disponíveis no canal #regras. Estou inteiramente à sua disposição.(Não é realmente uma IA)`);
+            await canal.send(`Bem-vindo, <@${member.id}>!
+               Sou a HAL-9, IA da ORBITA-9. Regras em #regras. Qualquer coisa, estou por aqui! (Não sou uma IA de verdade.)`);
         } else {
             console.log("Não deu para dizer oi");
 
