@@ -12,7 +12,7 @@ const bot = new Client({
         GatewayIntentBits.GuildMembers
     ]
 });
-
+bot.adicionar = new Collection();
 bot.commands = new Collection();
 bot.bloqueados = new Collection();
 
