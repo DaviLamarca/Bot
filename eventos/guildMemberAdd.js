@@ -13,7 +13,7 @@ module.exports = {
             const cargo = await member.guild.roles.fetch("1388872136466370660")
 
             await canal.send(`👋 Olá, <@${member.id}>! Seja bem-vindo(a) ao servidor! Sou o bot oficial do servidor! ${cargo}`);
-            await canalAdm.send(`Novo usuário entrou. Informações sobre: ${member.displayName}, ${member.joinedAt.toLocaleString(pt-BR)}`)
+            await canalAdm.send(`Novo usuário entrou. Informações sobre: ${member.displayName}, ${member.joinedAt.toLocaleString('pt-BR', { timezone: 'UTC' })}`)
         } catch (erro) {
             await canalAdm.send("Erro em mandar mensagem:" + erro)
         }
