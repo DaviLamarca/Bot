@@ -38,7 +38,7 @@ module.exports = {
                 'Clique no botão para receber um dos cargos de cor disponíveis. Ao escolher uma cor, você receberá o cargo correspondente e, automaticamente, perderá o acesso a este canal. Isso significa que, após a escolha, você não poderá mais visualizar nem interagir neste canal específico, pois ele será ocultado para você. Pense bem antes de selecionar, pois a alteração é definitiva até que um administrador ou moderador faça a remoção do cargo para restaurar seu acesso. Caso tenha dúvidas, entre em contato com a equipe do servidor para obter ajuda.'
             );
         await mensagem.reply({
-            content: [embed],
+            embed: [embed],
             components: [linha]
         });
     }
