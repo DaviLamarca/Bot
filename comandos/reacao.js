@@ -11,22 +11,22 @@ module.exports = {
         const botao1 = new ButtonBuilder()
             .setCustomId(`darCargo_${cargoId1}`)
             .setLabel('Preto')
-            .setStyle(ButtonStyle.Premium);
+            .setStyle(ButtonStyle.Secondary);
 
         const botao2 = new ButtonBuilder()
             .setCustomId(`darCargo_${cargoId2}`)
             .setLabel('Amarelo')
-            .setStyle(ButtonStyle.Premium);
+            .setStyle(ButtonStyle.Secondary);
 
         const botao3 = new ButtonBuilder()
             .setCustomId(`darCargo_${cargoId3}`)
             .setLabel('Azul')
-            .setStyle(ButtonStyle.Premium);
+            .setStyle(ButtonStyle.Secondary);
 
         const botao4 = new ButtonBuilder()
             .setCustomId(`darCargo_${cargoId4}`)
             .setLabel('Vermelho')
-            .setStyle(ButtonStyle.Premium);
+            .setStyle(ButtonStyle.Secondary);
 
 
         const linha = new ActionRowBuilder().addComponents(botao1, botao2, botao3, botao4);
