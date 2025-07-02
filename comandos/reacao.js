@@ -32,7 +32,7 @@ module.exports = {
         const linha = new ActionRowBuilder().addComponents(botao1, botao2, botao3, botao4);
 
         await mensagem.reply({
-            content: 'Clique para receber um cargo. Caso uma cor for escolhida, você não poderá ver o canal novamente:',
+            content: 'Clique no botão para receber um dos cargos de cor disponíveis. Ao escolher uma cor, você receberá o cargo correspondente e, automaticamente, perderá o acesso a este canal. Isso significa que, após a escolha, você não poderá mais visualizar nem interagir neste canal específico, pois ele será ocultado para você. Pense bem antes de selecionar, pois a alteração é definitiva até que um administrador ou moderador faça a remoção do cargo para restaurar seu acesso. Caso tenha dúvidas, entre em contato com a equipe do servidor para obter ajuda.',
             components: [linha]
         });
     }
