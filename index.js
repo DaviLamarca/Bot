@@ -1,17 +1,37 @@
-const { Client, GatewayIntentBits, Collection } = require('discord.js');
+const { 
+    Client, 
+    GatewayIntentBits, 
+    Partials, 
+    ButtonBuilder, 
+    ActionRowBuilder, 
+    ButtonStyle, 
+    Events, 
+    SelectMenuBuilder, 
+    StringSelectMenuBuilder, 
+    StringSelectMenuOptionBuilder 
+} = require('discord.js');
 const fs = require('fs');
 const config = require('./config.json');
 require('dotenv').config();
 const token = process.env.TOKEN;
 
 const bot = new Client({
-    intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.MessageContent,
-        GatewayIntentBits.GuildMembers
+    intents: [  
+        GatewayIntentBits.Guilds, // Necessário para interações (botões, slash commands, menus)
+        GatewayIntentBits.GuildMessages, // Receber mensagens nos canais
+        GatewayIntentBits.MessageContent, // Acessar o conteúdo das mensagens
+        GatewayIntentBits.GuildMembers, // Ver membros do servidor (útil para replies personalizadas)
+        GatewayIntentBits.GuildMessageReactions // (Opcional) Reações em mensagens
+    ],
+    partials: [
+        Partials.Message,
+        Partials.Channel,
+        Partials.Reaction,
+        Partials.User,
+        Partials.GuildMember
     ]
 });
+  
 bot.adicionar = new Collection();
 bot.commands = new Collection();
 bot.bloqueados = new Collection();
