@@ -29,7 +29,7 @@ module.exports = {
             .setStyle(ButtonStyle.Primary);
 
 
-        const linha = new ActionRowBuilder().addComponents(botao1, botao2);
+        const linha = new ActionRowBuilder().addComponents(botao1, botao2, botao3, botao4);
 
         await mensagem.reply({
             content: 'Clique para receber um cargo:',
