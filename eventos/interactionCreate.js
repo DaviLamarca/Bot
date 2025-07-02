@@ -13,6 +13,7 @@ module.exports = {
             }
 
             try {
+                await interaction.user.send('Olá, a cor foi adicionada com sucesso!');
                 await membro.roles.add(cargoId);
             } catch (error) {
                 console.error('Erro ao adicionar cargo:', error);

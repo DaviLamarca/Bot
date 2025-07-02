@@ -32,7 +32,7 @@ module.exports = {
         const linha = new ActionRowBuilder().addComponents(botao1, botao2, botao3, botao4);
 
         await mensagem.reply({
-            content: 'Clique para receber um cargo:',
+            content: 'Clique para receber um cargo. Caso uma cor for escolhida, você não poderá ver o canal novamente:',
             components: [linha]
         });
     }
