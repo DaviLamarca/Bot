@@ -4,8 +4,7 @@ module.exports = {
         if (memseagem) {
 
             function feliciadade(valor1) {
-                let valor = Math.floor(Math.random() * valor1)
-                return valor
+                return Math.floor(Math.random() * valor1)
             }
 
             let msg = feliciadade(100) + 1
