@@ -8,8 +8,8 @@ module.exports = {
                 return valor
             }
 
-            let mensagem = feliciadade(100) + 1
-            mensagem.channel.send(`Estou ${mensagem}% feliz!`)
+            let msg = feliciadade(100) + 1
+            memseagem.channel.send(`Estou ${msg}% feliz!`)
         }
     }
 }
