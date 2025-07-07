@@ -1,5 +1,5 @@
 module.exports = {
-    nome: "Mandar",
+    nome: "mandar",
     async executar(mensagem, bot) {
         let canal = "1386566946623062057"
 
