@@ -10,7 +10,9 @@ module.exports = {
 
         let bodycomando = mensagem.content.trim();
         let semCmd = bodycomando.split(" ");
+        console.log(semCmd);
         let args = semCmd.slice(1);
+        console.log(args);
 
         let canalServidor = await bot.channels.fetch(canal)
         await canalServidor.send(`${args}`)
