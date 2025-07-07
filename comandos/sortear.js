@@ -7,5 +7,8 @@ module.exports = {
         let args = semCmd.slice(1);
         console.log(args);
 
+        let valor = Math.floor(Math.random() * args.length)
+        mensagem.channel.send(args[valor])
+
     }
 }
