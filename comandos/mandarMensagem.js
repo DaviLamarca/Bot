@@ -13,8 +13,9 @@ module.exports = {
         console.log(semCmd);
         let args = semCmd.slice(1);
         console.log(args);
+        let finalMensagem = args.join(" ")
 
         let canalServidor = await bot.channels.fetch(canal)
-        await canalServidor.send(`${args}`)
+        await canalServidor.send(`${finalMensagem}`)
     }
 }
