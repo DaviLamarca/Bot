@@ -18,11 +18,11 @@ const token = process.env.TOKEN;
 
 const bot = new Client({
     intents: [
-        GatewayIntentBits.Guilds, // Necessário para interações (botões, slash commands, menus)
-        GatewayIntentBits.GuildMessages, // Receber mensagens nos canais
-        GatewayIntentBits.MessageContent, // Acessar o conteúdo das mensagens
-        GatewayIntentBits.GuildMembers, // Ver membros do servidor (útil para replies personalizadas)
-        GatewayIntentBits.GuildMessageReactions // (Opcional) Reações em mensagens
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent, 
+        GatewayIntentBits.GuildMembers,
+        GatewayIntentBits.GuildMessageReactions
     ],
     partials: [
         Partials.Message,
