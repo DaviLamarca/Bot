@@ -20,7 +20,9 @@ module.exports = {
 
         let title = args.shift().trim();
         let descricao = args.join(" ").trim();
-
+        if (!title || title.length === 0) {
+            return mensagem.channel.send("❌ O título não pode estar vazio.");
+        }
         if (title.length > 256) title = title.slice(0, 253) + "...";
         if (descricao.length > 4096) descricao = descricao.slice(0, 4093) + "...";
 
@@ -28,7 +30,10 @@ module.exports = {
             .setTitle(title)
             .setDescription(descricao)
             .setColor(0x0099FF)
-        mensagem.delete().catch(() => { })
+
+        setTimeout(() => {
+            mensagem.delete().catch(() => { })
+        }, 2000)
         return mensagem.channel.send({ embeds: [embed] });
     }
 }
