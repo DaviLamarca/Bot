@@ -28,7 +28,7 @@ module.exports = {
             .setTitle(title)
             .setDescription(descricao)
             .setColor(0x0099FF)
-
+        mensagem.delete().catch(() => { })
         return mensagem.channel.send({ embeds: [embed] });
     }
 }
