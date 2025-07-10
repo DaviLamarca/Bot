@@ -16,11 +16,23 @@ const config = require('./config.json');
 require('dotenv').config();
 const token = process.env.TOKEN;
 
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+    res.send('Bot da ORBITA-9 ativo!');
+});
+
+app.listen(PORT, () => {
+    console.log(`Servidor web escutando na porta ${PORT}`);
+});
+
 const bot = new Client({
     intents: [
         GatewayIntentBits.Guilds,
         GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.MessageContent, 
+        GatewayIntentBits.MessageContent,
         GatewayIntentBits.GuildMembers,
         GatewayIntentBits.GuildMessageReactions
     ],
