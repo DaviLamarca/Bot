@@ -1,9 +1,18 @@
-module.export = {
+const { EmbedBuilder } = require('discord.js');
+
+module.exports = {
     nome: 'guildMemberRemove',
-    async executar(member) {
-        const canal = client.channels.cache.get('1388340984672424028');
+    async executar(member, bot) {
+        const canal = bot.channels.cache.get('1388005828736319651');
         if (canal) {
-            await canal.send(`${member} saiu do servidor 😢`);
+            const embed = new EmbedBuilder()
+                .setTitle("👋 Membro saiu")
+                .setDescription(`${member} saiu do servidor 😢`)
+                .setColor(0xff5555)
+                .setFooter({ text: `ID de Tripulante: ${member.id}` })
+                .setTimestamp();
+
+            await canal.send({ embeds: [embed] });
         }
     }
 }
